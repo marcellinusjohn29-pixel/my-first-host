@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <style>
+        .com {
+            font-weight: bold;
+            color: orange;
+            font-size: 40px;
+            text-decoration: none;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-around;
+            font-size: 35px;
+
+        }
+
+        .pot {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 35px;
+
+        }
+
+        .fa-youtube-play {
+            color: orange;
+            background-color: beige;
+            padding: 10px;
+            border-radius: 25px;
+            border: 10px;
+            border-color: blanchedalmond;
+        }
+
+        .fa-linkedin {
+            color: orange;
+            background-color: beige;
+            padding: 10px;
+            border-radius: 25px;
+            border: 10px;
+            border-color: blanchedalmond;
+        }
+
+        .fa-facebook-official {
+            color: orange;
+            background-color: beige;
+            padding: 10px;
+            border-radius: 25px;
+            border: 10px;
+            border-color: blanchedalmond;
+        }
+
+        .fa-instagram {
+            color: orange;
+            background-color: beige;
+            padding: 10px;
+            border-radius: 25px;
+            border: 10px;
+            border-color: blanchedalmond;
+        }
+
+        .fa-twitter {
+            color: orange;
+            background-color: beige;
+            padding: 10px;
+            border-radius: 25px;
+            border: 10px;
+            border-color: blanchedalmond;
+        }
+
+        .fa-user-circle {
+            font-size: 90px;
+            margin-top: 40px;
+            color: rgb(131, 60, 115);
+            border: 40px;
+        }
+
+        .fa-check-square-o {
+            font-size: 90px;
+            margin-top: 40px;
+            color: rgb(224, 148, 7);
+            border: 40px;
+        }
+
+        .fa-users {
+            font-size: 90px;
+            margin-top: 40px;
+            color: rgb(224, 148, 7);
+            border: 40px;
+        }
+
+        .fa-trophy {
+            font-size: 90px;
+            margin-top: 40px;
+            color: rgb(179, 19, 45);
+            border: 40px;
+        }
+
+        .car {
+            background-color: white;
+            width: 350px;
+            height: 400px;
+            gap: 30px;
+            border-radius: 15px;
+            display: block;
+            border: 3px solid rgba(244, 240, 240, 0.964);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .anim-pulse {
+            color: rgb(219, 143, 3);
+            font-size: 80px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .anim-gon {
+            color: rgb(219, 143, 3);
+            font-size: 30px;
+            font-weight: bold;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .anim-bounce {
+            animation: bounce 1s ease-in-out infinite;
+        }
+        .anim-rotate { 
+            animation: rotate 2s ease-in-out infinite;
+        }
+
+
+        .btn-car:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+         @keyframes rotate {
+            from { transform: rotate(20deg); }
+            to { transform: rotate(29deg); }
+            }
+    </style>
+
+
+    <nav class="navbar navbar-expand-lg  bg-body-white">
+        <div class="container-fluid">
+            <a class="com" href="#"><img src="/HTML/images/logo.png" alt="" width="50px">BA <span
+                    class="text-black">FL</span>
+                <p class="text-warning fs-6">Become a football legend</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning text-success border" aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Winners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Testify</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-success bg-warning" type="submit">→] sign in →</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="b-example-divider"></div>
+    <div class="container col-red-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6"> <img src="/HTML/images/logo.png" class="anim-bounce"
+                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="300" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Become a Football <p class="anim-pulse">
+                        Legend</p>
+                </h1>
+                <p class="lead text-black">Step into the arena where passion meets glory! Becomes a football Legend
+                    challenges you to test your knowledge and rise to the top.
+                    Every win brings you closer to <span class="text-warning" class="anim-pulse">#1,000,000</span><br>
+                    Cast your vote by clicking any of the social media link below 👇 <br>
+                <div class="top">
+                    <a href="https://www.facebook.com/share/1BM9pTYnU2/?mibextid=wwXIfr"><i
+                            class="fa fa-facebook-official"></i></a>
+                    <a href="https://www.instagram.com/officialbafl?igsh=NzcwYng3dHdlZmZp&utm_source=qr"><i
+                            class="fa fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/officialbafl"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://x.com/officialbafl?s=21"><i class="fa fa-twitter"></i></a>
+                    <a href="https://youtube.com/@officialbafl?si=-AVSeQwWq0fyQxJv"><i
+                            class="fa fa-youtube-play"></i></a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="b-example-divider mb-0"></div>
+    </main>
+    <div class="container py-4">
+        <header>
+
+            <div class="pricing-header p-3 pb-md-4mx-auto text-center">
+                <h1 class="display-4 fw-normal text-body-emphasis fw-bold">Our Latest <span
+                        class="text-warning fw-bold">Winners</span></h1>
+                <p class="fs-5 text-body-secondary">Meet the legend who've conquered challenges and claimed their spot
+                    in football <br>history!🏆 </p>
+            </div>
+        </header>
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col ">
+                    <div class="car btn-car">
+                        <div class="bam">
+
+                            <h4 class="my-1 fw-bold "><i class="fa fa-user-circle"></i></h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><small
+                                    class="text-body-secondary fw-bold text-black">mosaino</small></h1>
+                            <p class="list-unstyled text-warning fw-light fs-4 mt-3 mb-4">
+                                fan_of_month
+                            </p>
+                            <p> november 2025</p>
+                            <div> <button type="button" class="w-10 btn text-warning mb-8 fw-bold btn-lg "
+                                    class="car btn-car">Read more
+                                    <span class="text-warning fs-3 fw-bold">→</span></h1>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="car btn-car">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal"><i class="fa fa-user-circle"></i></h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><small
+                                    class="text-body-secondary fw-bold text-black">Abom Banabas</small></h1>
+                            <p class="list-unstyled text-warning fw-light fs-4 mt-3 mb-4">
+                                fan_of_month
+                            </p>
+                            <p>september 2025</p>
+
+                            <div>
+                                <button type="button" class=" w-10 btn btn-lg text-warning mb-8 fw-bold">Read more <span
+                                        class="text-warning fs-3 fw-bold">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <div class="car btn-car">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal"><i class="fa fa-user-circle"></i></h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title"><small
+                                        class="text-body-secondary fw-light">Mosaino</small></h1>
+                                <p class="list-unstyled text-warning fw-light fs-4 mt-3 mb-4">
+                                    fan_of_month
+                                </p>
+                                <p>november2025</p>
+                                <button type="button" class="w-10 btn btn-lg text-warning fw-bold">Read more
+                                    <span class="text-warning fs-3 fw-bold">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </footer>
+            </div>
+            <div class="container py-4">
+                <header>
+
+                    <div class="pricing-header p-3 pb-md-4mx-auto text-center">
+                        <h1 class="display-4 fw-normal text-body-emphasis fw-bold">Steps to Participate </h1>
+                        <p class="fs-5 text-body-secondary">Think you've got what it takes to win
+                        <p class="anim-gon">
+                            #1,000,000</p> Follow these simple steps!
+
+                        </p>
+                    </div>
+                </header>
+                <main>
+                    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                        <div class="col ">
+                            <div class="car btn-car">
+                                <div class="bam">
+
+                                    <h4 class="my-1 fw-bold "><i class="fa fa-users"></i></h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title"><small
+                                            class="text-body-secondary text-black fw-bold">Register</small></h1>
+                                    <p class="list-unstyled mt-3 mb-4">
+                                        Sign up and complete your registration by paying the required fee
+                                    </p>
+                                    <div> <button type="button" class="100 btn btn-lg btn-outline-primary ">Register
+                                            <span class="text-primary fs-3 fw-bold">→</span></h1>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="car btn-car">
+                                <div class="card-header py-3">
+                                    <h4 class="my-0 text-warning fs-1 fw-bold"><i class="fa fa-check-square-o"></i></h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title"><small
+                                            class="text-body-secondary fw-bold text-black">Take the Quiz</small></h1>
+                                    <p class="list-unstyled fw-light mt-3 mb-4">
+                                        Test your football knowledge in our onlin Quiz
+                                    </p>
+                                    <button type="button" class="-100 btn btn-lg btn-outline-warning">start Quiz
+                                        <span class="text-warning fs-3 fw-bold">→</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col">
+                                <div class="car btn-car">
+                                    <div class="card-header py-3">
+                                        <h4 class="my-0 fw-normal"><i class="fa fa-trophy"></i></h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="card-title pricing-card-title"><small
+                                                class="text-body-secondary fw-bold text-black">Compete Weekly</small>
+                                        </h1>
+                                        <p class="list-unstyled mt-3 mb-4">
+                                            get invited to the weekly show and compete for ₦1,000,000!
+                                        </p>
+                                        <button type="button" class="100 btn btn-lg btn-outline-danger">Learn
+                                            more
+                                            <span class="text-warning fs-3 fw-bold">→</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </footer>
+                    </div>
+                    <main>
+                        <div class="b-example-divider"></div>
+                        <div class="px-4 pt-5 my-5 text-center border-bottom">
+                            <h1 class="display-4 fw-bold text-body-emphasis">Don't miss your chance to win <span
+                                    class="text-warning fs-1 fw-bold">₦1,000,000!</span></h1>
+                            <div class="col-lg-6 mx-auto">
+                                <p class="lead mb-4">Register now, take the quiz, and prove your football knowledge.</p>
+                                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> <button
+                                        type="button" class="btn fw-bold btn-warning fs-2 btn-lg px-4 me-sm-3">Sign up
+                                        today <span class="text-black fs-2 fw-bold">→</span>
+                                    </button>
+                                </div>
+                                <div class="b-example-divider mb-0"></div>
+                    </main>
+                    <div class=" text-center">
+                        <div class="container py-5">
+                            <h1 class="text-warning fs-1 fw-bold">Features</h1>
+                        </div>
+                    </div>
+                    <div class="b-example-divider"></div>
+                    <div class="container col-red-8 px-4 py-5">
+                        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                            <div class="col-10 col-sm-8 col-lg-6"> <img src="/HTML/images/feature1.jpeg" class="anim-rotate"
+                                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="300"
+                                    loading="lazy"> </div>
+                            <div class="col-lg-6">
+                                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Online Football Quiz
+                                    Competition
+                                </h1>
+                                <p class="lead text-black"> Test your football knowledge with our exciting quiz
+                                    challenges.
+                                    Answer questions within the given time limit and climb the leaderboard to secure
+                                    your spot in the competition.
+                                    <br><i class="fa fa-check-circle-o text-warning "></i> Participants must be quick
+                                    and accurate to
+                                    earn points.
+                                    <br><i class="fa fa-check-circle-o text-warning "></i> Each quiz is designed to
+                                    challenge your
+                                    football expertise.
+                                    <br><i class="fa fa-check-circle-o text-warning "></i> Top scorers get a chance to
+                                    advance to the
+                                    weekly show.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container col-red-8 px-4 py-5">
+                        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                            <div class="col-10 col-sm-8 col-lg-6"> <img src="/HTML/images/social.jpeg"
+                                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="300"
+                                    loading="lazy"> </div>
+                            <div class="col-lg-6">
+                                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Secure Payment & Registration
+                                    System
+                                </h1>
+                                <p class="lead text-black">Easily register and make payments through our secure
+                                    platform. Our encrypted payment system ensures your transactions are safe and
+                                    verified <instantly class="span fw-bold">
+                                        <br><i class="fa fa-check-circle-o text-warning "></i> Payment confirmations are
+                                        sent
+                                        immediately after registration.
+                                        <br><i class="fa fa-check-circle-o text-warning"></i> Multiple payment options
+                                        are available
+                                        for convenience.
+                                        <br><i class="fa fa-check-circle-o text-warning"></i> Your personal and
+                                        financial information
+                                        remains protected.
+                                    </instantly>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <main>
+                        <div class="b-example-divider"></div>
+                        <div class="px-4 pt-5 my-5 text-center border-bottom">
+                            <h1 class="display-4 fw-bold text-body-emphasis">What Our<span
+                                    class="text-warning fs-1 fw-bold"> Legends</span> Say</h1>
+                            <div class="col-lg-6 mx-auto">
+                                <p class="lead mb-4">Hear from our champions who have experienced the thrill of victory!
+
+                                    You can as well <span class="text-warning fs-5 fw-bold">Testify</span></h1>
+
+                                </p>
+                                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                                </div>
+                                <div class="b-example-divider mb-0"></div>
+                    </main>
+                    <main>
+                        <div id="myCarousel" class="carousel slide  mb-6" data-bs-ride="carousel">
+                            <div class="carousel-indicators"> <button type="button" data-bs-target="#myCarousel"
+                                    data-bs-slide-to="0" class="" aria-label="Slide 1"></button> <button type="button"
+                                    data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                                    class="active" aria-current="true"></button> <button type="button"
+                                    data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                                    class=""></button> </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item"> <svg aria-hidden="true" class="bd-placeholder-img "
+                                        height="100%" preserveAspectRatio="xMidYMid slice" width="100%"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                                    </svg>
+                                    <div class="container">
+                                        <div class="carousel-caption text-start">
+                                            <h1>Example headline.</h1>
+                                            <p class="opacity-75">Some representative placeholder content for the first
+                                                slide of the carousel.</p>
+                                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item active"> <svg aria-hidden="true" class="bd-placeholder-img "
+                                        height="100%" preserveAspectRatio="xMidYMid slice" width="100%"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                                    </svg>
+                                    <div class="container">
+                                        <div class="carousel-caption">
+                                            <h1>Another example headline.</h1>
+                                            <p>Some representative placeholder content for the second slide of the
+                                                carousel.</p>
+                                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item"> <svg aria-hidden="true" class="bd-placeholder-img "
+                                        height="100%" preserveAspectRatio="xMidYMid slice" width="100%"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                                    </svg>
+                                    <div class="container">
+                                        <div class="carousel-caption text-end">
+                                            <h1>One more for good measure.</h1>
+                                            <p>Some representative placeholder content for the third slide of this
+                                                carousel.</p>
+                                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                                data-bs-slide="prev"> <span class="carousel-control-prev-icon"
+                                    aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                                data-bs-slide="next"> <span class="carousel-control-next-icon"
+                                    aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+                        </div>
+                    </main>
+                    <footer class="py-5">
+                        <div class="row">
+                            <div class="col-6 col-md-2 mb-3">
+                                <h5>Navigation</h5>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">Home</a></li>
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">About</a></li>
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">Contact</a></li>
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">Blog</a></li>
+                            </div>
+                            <div class="col-6 col-md-2 mb-3">
+                                <h5>Contact
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item mb-2"><a href="#"
+                                                class="nav-link p-0 text-body-secondary"><i
+                                                    class="material-icons"></i>📍 Hiltop Abakaliki, Nigeria</a></li>
+                                        <li class="nav-item mb-2"><a href="#"
+                                                class="nav-link p-0 text-body-secondary"><i class="fa fa-phone"></i>
+                                                +2347049876890</a></li>
+                                        <li class="nav-item mb-2"><a href="#"
+                                                class="nav-link p-0 text-body-secondary"><i class="fa fa-envelope"></i>
+                                                support@officialbafl.com</a></li>
+                                    </ul>
+                            </div> <br>
+                            <div class="col-6 col-md-2 mb-3">
+                                <h5>Quick Links</h5>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">Winners</li>
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">Blog</a></li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sign
+                                            in</a></li>
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">About</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-2 mb-3">
+                                <h5>Quick Links</h5>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">Terms$condition</li>
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">privacy policy</a></li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help
+                                            center</a></li>
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                            <div class="pot">
+                                <a href="https://www.facebook.com/share/1BM9pTYnU2/?mibextid=wwXIfr"><i
+                                        class="fa fa-facebook-official"></i></a>
+                                <a href="https://www.instagram.com/officialbafl?igsh=NzcwYng3dHdlZmZp&utm_source=qr"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="https://linkedin.com/company/officialbafl"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://x.com/officialbafl?s=21"><i class="fa fa-twitter"></i></a>
+                                <a href="https://youtube.com/@officialbafl?si=-AVSeQwWq0fyQxJv"><i
+                                        class="fa fa-youtube-play"></i></a>
+                                </p>
+                            </div>
+                            <p>© 2025 Company, Inc. All rights reserved.</p>
+
+
+                        </div>
+                    </footer>
+</body>
+
+</html>
